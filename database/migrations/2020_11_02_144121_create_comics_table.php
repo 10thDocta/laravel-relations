@@ -18,6 +18,7 @@ class CreateComicsTable extends Migration
             $table->string('isbn', 13)->unique();
             $table->string('title', 70);
             $table->string('original_title', 70)->nullable();
+            $table->foreignId('author_id')->constrained();
             $table->string('publisher', 50)->nullable();
             $table->year('year');
             $table->string('language', 2);
